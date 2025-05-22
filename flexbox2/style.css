@@ -1,0 +1,148 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: gray;
+  line-height: 1.5; /* jarak antar baris */
+}
+
+/* latihan 1 */
+.container-1 {
+  background-color: white;
+  width: 800px;
+  margin: 50px auto;
+  box-sizing: border-box; /* menjaga ukuran container tidak berubah karena padding */
+  display: flex;
+  justify-content: space-between;
+}
+.container-1 div {
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 5px;
+  width: 30%;
+}
+.kolom-utama {
+  background-color: rgb(119, 119, 225);
+  flex: 3;
+  order: 2;
+}
+.sidebar-satu {
+  background-color: rgb(132, 231, 132);
+  flex: 1;
+  order: 1;
+}
+.sidebar-dua {
+  background-color: rgb(210, 116, 116);
+  flex: 1;
+  order: 3;
+}
+
+/* latihan 2 */
+.container-2 {
+  max-width: 800px;
+  margin: 50px auto;
+  border: 1px solid black;
+}
+.layanan {
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+.layanan.satu {
+  background-color: rgb(102, 102, 221);
+}
+.layanan.dua {
+  background-color: rgb(127, 222, 127);
+}
+.layanan.tiga {
+  background-color: rgb(234, 122, 122);
+}
+
+/* latihan 3 */
+.container-3 {
+  max-width: 800px;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.thumbnail {
+  width: 40%;
+  margin: 10px;
+}
+.thumbnail img {
+  width: 100%;
+}
+
+/* latihan 4 */
+.container-4 {
+  max-width: 800px;
+  margin: 50px auto;
+}
+.card {
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #b6b3b3;
+  overflow: hidden;
+  margin: 10px;
+  flex: 1;
+}
+.card .header {
+  height: 150px;
+  background-color: #999;
+}
+.card .content {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+/* latihan 5 */
+.container-5 {
+  max-width: 500px;
+  height: 500px;
+  border: 1px solid black;
+  margin: 50px auto;
+  display: flex;
+}
+.kotak {
+  width: 200px;
+  height: 200px;
+  background-color: rgb(224, 224, 108);
+  /* menengahkan tulisan secara horizintal sumbu X */
+  /* text-align: center;  */
+  /* menengahkan tulisan secara vertical sumbu Y, tapi ini berlaku jika tulisannya beberapa kata saja */
+  /* line-height: 200px;  */
+  /* dg display flex di containernya, ini dapat menengahkan objek secara otomatis tanpa matematika */
+  margin: auto;
+  display: flex;
+  text-align: center;
+}
+/* untuk menangani tulisan dengan jumlah banya dapat melakukan display: flex lalu text-align: center pada containernya dan ini */
+.kotak span {
+  margin: auto;
+}
+
+/* responsive */
+@media (min-width: 380px) {
+  /* latihan 2 */
+  .container-2 {
+    display: flex;
+    justify-content: space-between;
+  }
+  .layanan {
+    width: 30%;
+  }
+  /* latihan 3 */
+  .thumbnail {
+    width: 20%;
+  }
+
+  /* latihan 4 */
+  .container-4 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
